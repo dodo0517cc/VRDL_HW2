@@ -81,7 +81,7 @@ Step9: Copy weights(best.pt) to ScaledYOLOv4-yolov4-csp file and obj.names to th
 
 Step10: Test.
 
-    !python test.py --img 576 --conf 0.5 --batch 8 --device 0 --data data/digits.yaml --names data/obj.names --cfg models/yolov4-csp_416.cfg --weights best.pt --task test --save-json
+    !python test.py --img 576 --conf 0.001 --batch 8 --device 0 --data data/digits.yaml --names data/obj.names --cfg models/yolov4-csp_416.cfg --weights best.pt --task test --save-json
     
 ## Generate answer.json for submission on Codalab
 
@@ -89,4 +89,4 @@ Colab link : https://colab.research.google.com/drive/1nuD7Wjm8eQZ_GffDrEoYmo5zeG
 
 
 
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/77607182/143190090-1158eb9b-a954-460c-9f24-c467da86bea0.png">
+<img width="1000" alt="image" src="https://user-images.githubusercontent.com/77607182/143190090-1158eb9b-a954-460c-9f24-c467da86bea0.png">
