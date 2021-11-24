@@ -4,22 +4,13 @@
     from google.colab import drive
     drive.mount('/content/gdrive')
 
-File in coco/annotations in mydrive（https://drive.google.com/drive/folders/1G18BWENqpOMPfMxKhLCxSSq5vfHEVtYe?usp=sharing）:
+File in coco/annotations in mydrive（https://drive.google.com/drive/folders/1G18BWENqpOMPfMxKhLCxSSq5vfHEVtYe?usp=sharing）: 
+
 instances_val2017.json
 
 File in yolov4 in mydrive（https://drive.google.com/drive/folders/1FjZW9NP1hTWR-oXqIgeF2GmzVJfUTMdj?usp=sharing）：
-png_to_jpg.py
-generate_txt.py
-generate_train.py
-generate_test.py
-test.txt
-boxes.csv
-obj.zip
-obj_test.zip
-train_txt.zip
-obj.names
-weights－best.pt
 
+png_to_jpg.py / generate_txt.py / generate_train.py / generate_test.py / test.txt / boxes.csv / obj.zip / obj_test.zip / train_txt.zip / obj.names / weights－best.pt
 
 ## Use GPU
 
