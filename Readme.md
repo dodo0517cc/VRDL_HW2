@@ -85,8 +85,8 @@ Step10: Test.
     
 ## Generate answer.json for submission on Codalab
 
-Colab link : https://colab.research.google.com/drive/1nuD7Wjm8eQZ_GffDrEoYmo5zeGP2vNBj#scrollTo=Lx6jYnaLaj1q
+Colab link : https://colab.research.google.com/drive/1WkCJSgeuVHn3dUtn_yP8eq4TGJCiIp6D?authuser=2#scrollTo=coVPLCeq7lZH
 
 
 
-<img width="1000" alt="image" src="https://user-images.githubusercontent.com/77607182/143190090-1158eb9b-a954-460c-9f24-c467da86bea0.png">
+<img width="900" alt="image" src="https://user-images.githubusercontent.com/77607182/143196931-6bb7c1dc-ff8d-44d9-b135-d9c795d499a8.png">
