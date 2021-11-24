@@ -1,17 +1,52 @@
-##README
+## README
 
 Step1: Use GPU. Set up the environment.
 
 `
 !sudo apt update
+`
+
+`
 !sudo apt install libgl1-mesa-glx -y
+`
+
+`
+! nvidia-smi
 `
 
 Step2: Git clone the project：https://github.com/WongKinYiu/ScaledYOLOv4
 
+`
+%cd /content/gdrive/My Drive
+`
+
+`
+!wget https://github.com/WongKinYiu/ScaledYOLOv4/archive/yolov4-csp.zip
+`
+
+`
+!unzip yolov4-csp.zip && rm yolov4-csp.zip
+`
+
 Step3: Install torch==1.6.0+cu101, torchvision==0.7.0+cu101
 
+`
+!pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+`
+
 Step4: Git clone https://github.com/thomasbrandon/mish-cuda, then install.
+
+`
+!git clone https://github.com/thomasbrandon/mish-cuda
+`
+
+`
+%cd mish-cuda
+`
+
+`
+!python setup.py build install
+`
 
 Step5: Update YAML
 
