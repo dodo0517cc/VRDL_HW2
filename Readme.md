@@ -43,16 +43,50 @@ Step5: Update YAML
 
 Step6: Create a digits.yaml in the data folder, which stores the training set, validation set and test set paths, the number of categories and the category names.
 
+    %cd /content/gdrive/MyDrive/ScaledYOLOv4-yolov4-csp/data
+    !touch digits.yaml
+    %cd /content/gdrive/MyDrive/ScaledYOLOv4-yolov4-csp/data
+    
+    %%writefile digits.yaml
+    # train: /content/gdrive/MyDrive/ScaledYOLOv4-yolov4-csp/data/train.txt
+    # val: /content/gdrive/MyDrive/ScaledYOLOv4-yolov4-csp/data/valid.txt
+    test: /content/gdrive/MyDrive/ScaledYOLOv4-yolov4-csp/data/test.txt
+    nc: 10
+    names: ['1.0','2.0','3.0','4.0','5.0','6.0','7.0','8.0','9.0','10.0']
+
 Step7: Modify cfg file. Copy a original cfg file and change the image width and height to 576, filters to 45(filters=(classes + 5)*3, and classes to 10.
 
+
+    !cp models/yolov4-csp.cfg models/yolov4-csp_416.cfg
+    !sed -n -e 8p -e 9p -e 1022p -e 1029p -e 1131p -e 1138p -e 1240p -e 1247p models/yolov4-csp_416.cfg
+
+    !sed -i '8s/512/576/' models/yolov4-csp_416.cfg
+    !sed -i '9s/512/576/' models/yolov4-csp_416.cfg
+    !sed -i '1022s/255/45/' models/yolov4-csp_416.cfg
+    !sed -i '1029s/80/10/' models/yolov4-csp_416.cfg
+    !sed -i '1131s/255/45/' models/yolov4-csp_416.cfg
+    !sed -i '1138s/80/10/' models/yolov4-csp_416.cfg
+    !sed -i '1240s/255/45/' models/yolov4-csp_416.cfg
+    !sed -i '1247s/80/10/' models/yolov4-csp_416.cfg
+    # 查看修改後的參數
+    !sed -n -e 8p -e 9p -e 1022p -e 1029p -e 1131p -e 1138p -e 1240p -e 1247p models/yolov4-csp_416.cfg
+    
+## Wget testing data
+
 Step8: Upload the zip file（obj_test.zip） of all of the test images. Unzip it to the data folder that is in ScaledYOLOv4-yolov4-csp file. Copy gerenate_test.py to ScaledYOLOv4-yolov4-csp file. Then, run it. It will generate test.txt.
+
+## Run inference and benchmark
 
 Step9: Copy weights(best.pt) to ScaledYOLOv4-yolov4-csp file and obj.names to the data folder that is in ScaledYOLOv4-yolov4-csp file.
 
 Step10: Test.
 
+    !python test.py --img 576 --conf 0.5 --batch 8 --device 0 --data data/digits.yaml --names data/obj.names --cfg models/yolov4-csp_416.cfg --weights best.pt --task test --save-json
+    
+## Generate answer.json for submission on Codalab
+
 Colab link : https://colab.research.google.com/drive/1nuD7Wjm8eQZ_GffDrEoYmo5zeGP2vNBj#scrollTo=Lx6jYnaLaj1q
 
 
 
-<img width="415" alt="image" src="https://user-images.githubusercontent.com/77607182/143190090-1158eb9b-a954-460c-9f24-c467da86bea0.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/77607182/143190090-1158eb9b-a954-460c-9f24-c467da86bea0.png">
