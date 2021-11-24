@@ -88,4 +88,4 @@ Step10: Test.
 Colab link : https://colab.research.google.com/drive/1WkCJSgeuVHn3dUtn_yP8eq4TGJCiIp6D?authuser=2#scrollTo=coVPLCeq7lZH
 
 
-<img width="1315" alt="image" src="https://user-images.githubusercontent.com/77607182/143197647-871a30ce-3539-4e0f-9a4c-44cc20cccb96.png">
+<img width="1315" alt="image" src="https://user-images.githubusercontent.com/77607182/143197747-f54dcc55-2470-4485-ac90-b86552c21c76.png">
