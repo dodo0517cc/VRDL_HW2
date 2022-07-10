@@ -1,4 +1,54 @@
-## README
+# Object detection of numbers
+
+## Reference：
+
+Scaled-YOLOv4—https://github.com/WongKinYiu/ScaledYOLOv4
+
+Mish-Cuda－https://github.com/thomasbrandon/mish-cuda
+ 
+We can see that positive values can reach any height to avoid saturation due to capping. The theoretically slight allowance for negative values allows for better gradient flow instead of hard zero boundaries like in ReLU. A smooth activation function allows better information to penetrate the neural network, resulting in better accuracy and generalization.
+
+## Brief introduction： 
+First, we have to read the mat file and check the details of all the boxes and turn it to yolo format. Generate the files that yolo need. Then, put all the images, boxes and labels to ScaledYOLOv4 model. The most important thing is to tune the parameters. Finally train the images and test it with the best weight. 
+
+## Methodology：
+
+### Data pre-process：
+
+Read the .mat file：change it to boxes.csv, list the detail of boxes of each box.
+
+### Augmentation：
+
+hsv_h（HSV-Hue augmentation）: 0.015  
+
+hsv_s（HSV-Saturation augmentation）: 0.7
+
+hsv_v（HSV-Value augmentation）: 0.4 
+
+degrees（image rotation）: 20.0 
+
+scale（image scale）: 0.5 
+
+shear（image shear）: 10.0 
+
+perspective（image perspective）: 0.0008   range 0-0.001
+
+mosaic: 1.0（probability）
+
+### Model architecture：
+
+Scaled YOLOv4－https://github.com/WongKinYiu/ScaledYOLOv4
+
+Scaled-YOLOv4 was proposed on November 16, 2020 to improve YOLOv4.
+
+•	Designed a powerful model scaling method for small models, which systematically balances the computational cost and storage bandwidth of shallow CNN
+•	Design a simple and effective scaling strategy for large-scale target detectors
+•	Analyze the relationship between the scaling factors of each model, and scale the model based on the optimal group division
+•	Experiments confirmed that the FPN structure is essentially a one-off structure;
+•	Use the above methods to develop yolov4-tiny and yolo4v4-large
+
+
+## Reproduce the results
 
     import os
     from google.colab import drive
@@ -97,5 +147,8 @@ Colab link :https://colab.research.google.com/drive/1ZydftPlARDwjBYslWqYspbx88jj
 
 
 <img width="1315" alt="image" src="https://user-images.githubusercontent.com/77607182/143197747-f54dcc55-2470-4485-ac90-b86552c21c76.png">
+
+<img width="415" alt="image" src="https://user-images.githubusercontent.com/77607182/178137817-b435c0f1-3509-4f87-8bc6-c0546353e4ff.png">
+
 
 
