@@ -148,7 +148,7 @@ Colab link :https://colab.research.google.com/drive/1ZydftPlARDwjBYslWqYspbx88jj
 
 <img width="1315" alt="image" src="https://user-images.githubusercontent.com/77607182/143197747-f54dcc55-2470-4485-ac90-b86552c21c76.png">
 
-## (note: label 0 means number 1, label 1 means number 2, label 2 means number 3, etc.)
+#### (note: label 0 means number 1, label 1 means number 2, label 2 means number 3, etc.)
 
 <img width="415" alt="image" src="https://user-images.githubusercontent.com/77607182/178137817-b435c0f1-3509-4f87-8bc6-c0546353e4ff.png">
 
